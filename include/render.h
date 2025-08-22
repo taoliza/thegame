@@ -5,7 +5,7 @@
 #include "raylib.h"
 #include "game.h"
 
-void Render_Scene(const GameState* g);
-void Render_HUD(const GameState* g);
+void render_scene(const game_state_t* g);
+void render_hud(const game_state_t* g);
 
 #endif // RENDER_H

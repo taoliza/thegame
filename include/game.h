@@ -3,13 +3,13 @@
 #include "raylib.h"
 
 typedef struct {
-    Vector2 playerPos;
-    float playerSpeed;
-} GameState;
+    Vector2 player_pos;
+    float player_speed;
+} game_state_t;
 
-void Game_Init(GameState* g);
-void Game_Update(GameState* g, float dt);
-void Game_Draw(const GameState* g);
-void Game_Shutdown(GameState* g);
+void game_init(game_state_t* g);
+void game_update(game_state_t* g, float dt);
+void game_draw(const game_state_t* g);
+void game_shutdown(game_state_t* g);
 
 #endif

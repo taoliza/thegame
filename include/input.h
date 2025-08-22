@@ -7,15 +7,15 @@
 
 typedef struct {
 	// Acciones de alto nivel
-	float moveX; // -1..1
-	float moveY; // -1..1
-	bool action; // click o acción principal
-} InputState;
+	float move_x; // -1..1
+	float move_y; // -1..1
+	bool action;  // click o acción principal
+} input_state_t;
 
-// Lee el estado de teclado/mouse y llena InputState
-void Input_Read(InputState* in);
+// Lee el estado de teclado/mouse y llena input_state_t
+void input_read(input_state_t* in);
 
-// Aplica el input al GameState (no modifica render)
-void Input_Apply(GameState* g, const InputState* in, float dt);
+// Aplica el input al game_state_t (no modifica render)
+void input_apply(game_state_t* g, const input_state_t* in, float dt);
 
 #endif // INPUT_H

@@ -5,20 +5,20 @@ int main(void) {
     InitWindow(800, 600, "Juego modular con raylib");
     SetTargetFPS(60);
 
-    GameState game;
-    Game_Init(&game);
+    game_state_t game;
+    game_init(&game);
 
     while (!WindowShouldClose()) {
         float dt = GetFrameTime();
 
-        Game_Update(&game, dt);
+        game_update(&game, dt);
 
         BeginDrawing();
-        Game_Draw(&game);
+        game_draw(&game);
         EndDrawing();
     }
 
-    Game_Shutdown(&game);
+    game_shutdown(&game);
     CloseWindow();
     return 0;
 }

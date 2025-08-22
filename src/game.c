@@ -2,22 +2,22 @@
 #include "input.h"
 #include "render.h"
 
-void Game_Init(GameState* g) {
-    g->playerPos = (Vector2){ 400, 300 };
-    g->playerSpeed = 220.0f;
+void game_init(game_state_t* g) {
+    g->player_pos = (Vector2){ 400, 300 };
+    g->player_speed = 220.0f;
 }
 
-void Game_Update(GameState* g, float dt) {
-    InputState in;
-    Input_Read(&in);
-    Input_Apply(g, &in, dt);
+void game_update(game_state_t* g, float dt) {
+    input_state_t in;
+    input_read(&in);
+    input_apply(g, &in, dt);
 
-    // Aquí podrías añadir lógica de juego independiente del input
+    // Lógica de juego independiente del input
 }
 
-void Game_Draw(const GameState* g) {
-    Render_Scene(g);
-    Render_HUD(g);
+void game_draw(const game_state_t* g) {
+    render_scene(g);
+    render_hud(g);
 }
 
-void Game_Shutdown(GameState* g) { (void)g; }
+void game_shutdown(game_state_t* g) { (void)g; }
