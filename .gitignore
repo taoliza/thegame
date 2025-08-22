@@ -1,0 +1,75 @@
+# Proyecto C/CMake con Raylib (Windows / VS Code)
+# Ajusta según tus preferencias.
+
+# --- Directorios de build ---
+/build/
+/build-*/
+/cmake-build-*/
+/out/
+/bin/
+/obj/
+
+# --- Archivos generados por CMake en el raíz (si se generan aquí) ---
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+Makefile
+CTestTestfile.cmake
+Testing/
+
+# --- Ninja (por si cambias de generador) ---
+.ninja_deps
+.ninja_log
+build.ninja
+rules.ninja
+
+# --- Visual Studio / MSBuild (por si usas ese generador) ---
+.vs/
+Debug/
+Release/
+RelWithDebInfo/
+MinSizeRel/
+x64/
+x86/
+
+# --- VS Code ---
+# Ignora todo dentro de .vscode pero permite versionar settings/tareas útiles
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# --- IDEs varios ---
+.idea/
+*.iml
+
+# --- SO / cachés / temporales ---
+# Windows
+Thumbs.db
+Desktop.ini
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Linux / genéricos
+.cache/
+*.log
+*.tmp
+*.temp
+*.bak
+*~
+*.swp
+*.swo
+
+# --- Cobertura / análisis (si los generas) ---
+coverage/
+*.gcno
+*.gcda
+*.gcov
+
+# --- Binarios comunes ---
+*.exe
+*.obj
+*.o

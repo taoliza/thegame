@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "raylib.h": "c"
+    },
+    "cmake.sourceDirectory": "C:/Users/taoli/Desktop/THEGAME/vsworkspace",
+    "cmake.generator": "MinGW Makefiles"
+}

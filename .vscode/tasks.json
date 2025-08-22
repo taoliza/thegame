@@ -1,0 +1,68 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CMake: Configure (MinGW)",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "-G",
+        "MinGW Makefiles",
+        "-S",
+        "${workspaceFolder}",
+        "-B",
+        "${workspaceFolder}/build"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "CMake: Build",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "${workspaceFolder}/build"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "CMake: Clean",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "${workspaceFolder}/build",
+        "--target",
+        "clean"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build (configure+build)",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "CMake: Configure (MinGW)",
+        "CMake: Build"
+      ]
+    },
+    {
+      "label": "Run: raylibhelloworld",
+      "type": "shell",
+      "command": "${workspaceFolder}/build/raylibhelloworld.exe",
+      "dependsOn": ["CMake: Build"],
+      "problemMatcher": []
+    }
+  ]
+}
