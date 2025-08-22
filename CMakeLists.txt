@@ -1,8 +1,16 @@
 cmake_minimum_required(VERSION 3.15)
 project(raylibhelloworld C)
 
-# Crear ejecutable
-add_executable(raylibhelloworld src/raylibhelloworld.c)
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+
+# Crear ejecutable con la estructura modular
+add_executable(raylibhelloworld
+	src/main.c
+	src/game.c
+	src/input.c
+	src/render.c
+)
 
 # Headers del proyecto
 target_include_directories(raylibhelloworld PRIVATE ${CMAKE_SOURCE_DIR}/include)
